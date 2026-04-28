@@ -1,3 +1,9 @@
+/*
+ * This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
+ */
+
 /* --------------------------- */
 /*  CSS: Henri Koivuneva       */
 /*  henri.koivuneva@gmail.com  */
@@ -5,61 +11,6 @@
 
 @charset "utf-8";
 
-@font-face {
-    font-family: 'Inter';
-    font-weight: normal;
-    font-style: normal;
-    src: url("/media/fonts/Inter-Regular.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-weight: bold;
-    font-style: normal;
-    src: url("/media/fonts/Inter-Bold.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-weight: normal;
-    font-style: italic;
-    src: url("/media/fonts/Inter-Italic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter';
-    font-weight: bold;
-    font-style: italic;
-    src: url("/media/fonts/Inter-BoldItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter Light';
-    font-weight: normal;
-    font-style: normal;
-    src: url("/media/fonts/Inter-Light.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter Light';
-    font-weight: normal;
-    font-style: italic;
-    src: url("/media/fonts/Inter-LightItalic.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter Light';
-    font-weight: bold;
-    font-style: normal;
-    src: url("/media/fonts/Inter-Regular.woff2") format("woff2");
-}
-
-@font-face {
-    font-family: 'Inter Light';
-    font-weight: bold;
-    font-style: italic;
-    src: url("/media/fonts/Inter-Italic.woff2") format("woff2");
-}
 
 * {
     margin: 0;
@@ -68,47 +19,32 @@
 
 
 html {
-    background: url("/media/img/bg.png") repeat scroll 0 0 #eee;
-    font-family: "Inter", sans-serif;
+    font-family: "MozillaText", sans-serif;
 }
 
-header {
-    position: relative;
-    min-height: 30px;
-    padding: 10px 100px;
-    background: rgba(0,0,0,0.05);
-    color: #333;
-    text-transform: uppercase;
-    font-family: "Inter Light", sans-serif;
+#masthead {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 8px 16px;
 }
 
-header svg.mozilla-logo {
-    float: left;
-    width: 115px;
-    height: 30px;
+#logo {
+  flex-grow: 1;
 }
 
-header #lang-selection {
-    background: center left transparent no-repeat;
-    /*
-     * Icon attribution
-     * A’ Design Award & Competition, Onur Müştak Çobanlı and Farhat Datta
-     * http://www.languageicon.org
-     */
-    background-image: url(" /media/img/language_icon.png");
-    padding-left: 28px;
-    padding-bottom: 2px;
-}
-
-header #lang {
-    font-weight: 300;
-    text-align: right;
+#lang {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
 #wrapper {
     font-weight: 300;
-    text-shadow: 0 1px 0 #fff;
-    color: #333;
     margin-top:0px;
     text-align: center;
     padding-top: 60px;
@@ -120,45 +56,35 @@ header #lang {
     }
 }
 
-select {
-    background: #fff;
-    border-color: #b2b2b2;
-    border-style: solid;
-    border-width: 1px;
+#footer {
+  margin: auto 0;
 }
 
 .choices li {
     display: none;
+    font-size: 2.5rem;
+    font-weight: 600;
 }
 
 .question {
     display: none;
-}
-
-.question {
-    text-align: center;
     padding-top: 60px;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0 10%;
 }
 
 a {
-    color: #F17100;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.9), 0px 1px 1px rgba(255,255,255,0.9);
+    color: #000;
 }
 
-.question {
-    font-size: 20pt;
-    padding: 0 10% 0 10%;
+a:hover {
+  text-decoration: none;
 }
 
 #responses {
     padding-top: 1em;
     font-size: 30pt;
-    background-image: -moz-radial-gradient(center top , ellipse farthest-side, rgba(140, 140, 140, 0.5), rgba(140, 140, 140, 0) 95%), -moz-radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.5), rgba(220, 220, 220, 0)), -moz-radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.3), rgba(220, 220, 220, 0));
-    background-image: -webkit-radial-gradient(center top , ellipse farthest-side, rgba(140, 140, 140, 0.5), rgba(140, 140, 140, 0) 95%), -webkit-radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.5), rgba(220, 220, 220, 0)), -webkit-radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.3), rgba(220, 220, 220, 0));
-    background-image: -o-radial-gradient(center top , ellipse farthest-side, rgba(140, 140, 140, 0.5), rgba(140, 140, 140, 0) 95%), -o-radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.5), rgba(220, 220, 220, 0)), -o-radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.3), rgba(220, 220, 220, 0));
-    background-image: radial-gradient(center top , ellipse farthest-side, rgba(140, 140, 140, 0.5), rgba(140, 140, 140, 0) 95%), radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.5), rgba(220, 220, 220, 0)), radial-gradient(center top , ellipse farthest-side, rgba(220, 220, 220, 0.3), rgba(220, 220, 220, 0));
-    background-size: 100% 5px, 100% 100px, 100% 100%;
-    background-repeat: no-repeat;
 }
 
 #responses div {
@@ -169,76 +95,11 @@ a {
     display:none;
 }
 
-#responses div a:hover {
-    cursor: pointer;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset, 0px 3px 48px rgba(255,255,255,0.2) inset;
-    transition: all .12s ease-in-out;
-}
-
-#responses div a:active {
-    cursor: pointer;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset, 0 1px rgb(255, 255, 255, 0.1), 0px 3px 48px rgba(0,0,0,0.2) inset;
-    transition: all .12s ease-in-out;
-}
-
-#responses div a {
-    text-decoration: none;
-    color: #fff;
-    text-shadow: 0 1px 0 rgba(0,0,0,0.5);
-    padding: 2px 10px 8px;
-    border-radius: 6px;
-    border: 0 none;
-    transition: all .12s ease-in-out;
-    display: inline-block;
-    max-width: 90%;
-}
-
-#ok a {
-    background-color: #84C83C;
-    background: -moz-linear-gradient(#84C83C, #66AA1E) repeat scroll 0 0 #84C83C;
-    background: -webkit-linear-gradient(#84C83C, #66AA1E) repeat scroll 0 0 #84C83C;
-    background: -o-linear-gradient(#84C83C, #66AA1E) repeat scroll 0 0 #84C83C;
-    background: linear-gradient(#84C83C, #66AA1E) repeat scroll 0 0 #84C83C;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
-}
-
-#next a {
-    background-color: #669BE1;
-    background: -moz-linear-gradient(#669BE1, #487DC3) repeat scroll 0 0 #669BE1;
-    background: -webkit-linear-gradient(#669BE1, #487DC3) repeat scroll 0 0 #669BE1;
-    background: -o-linear-gradient(#669BE1, #487DC3) repeat scroll 0 0 #669BE1;
-    background: linear-gradient(#669BE1, #487DC3) repeat scroll 0 0 #669BE1;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
-}
-
-#back a {
-    background-color: #F19932;
-    background: -moz-linear-gradient(#F19932, #D37B14) repeat scroll 0 0 #F19932;
-    background: -webkit-linear-gradient(#F19932, #D37B14) repeat scroll 0 0 #F19932;
-    background: -o-linear-gradient(#F19932, #D37B14) repeat scroll 0 0 #F19932;
-    background: linear-gradient(#F19932, #D37B14) repeat scroll 0 0 #F19932;
-    box-shadow: 0 3px rgba(0, 0, 0, 0.1), 0 -4px rgba(0, 0, 0, 0.1) inset;
-}
-
-.choices li {
-    font-size: 60pt;
-    font-weight: 800;
-}
-
 .extra {
     color: #666;
     font-size: 20pt;
     font-weight: 600;
     padding-bottom: 1em;
-}
-
-#footer {
-    margin-top: 2em;
-    color: #666;
-}
-
-#footer a {
-    color: #555;
 }
 
 .negative {
@@ -277,10 +138,56 @@ html[dir="rtl"] #lang {
     margin-right: unset;
 }
 
-html[dir="rtl"] header .mozilla-logo {
-    float: right;
-}
-
 html[dir="rtl"] #lang {
     text-align: left;
+}
+
+/* Buttons */
+.mf-button,
+.mf-button-secondary {
+  border: 2px solid #000;
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1.5;
+  text-decoration: none;
+	padding: 8px 16px;
+}
+
+.mf-button,
+.mf-button-secondary:active,
+.mf-button-secondary:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+.mf-button:active,
+.mf-button:hover,
+.mf-button-secondary {
+	background-color: #fff;
+	color: #000;
+}
+
+/* Select */
+.mf-select {
+	appearance: none;
+	background-color: #fff;
+	background-image:
+    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%239595a2' d='M14.64 5.3 8 11.94 1.36 5.3.3 6.36l7.7 7.7 7.7-7.7z'/%3E%3C/svg%3E"),
+    linear-gradient(180deg,#fff 0,#fff);
+	background-position: right 8px top 50%;
+	background-repeat: no-repeat,repeat;
+	background-size: 1em auto,100%;
+	border: 2px solid #9595a2;
+	border-radius: 4px;
+	box-sizing: border-box;
+	display: block;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	line-height: 1.25;
+	max-width: 100%;
+	min-width: 256px;
+	padding: 8px calc(1.5em + 16px) 8px 8px;
+	text-overflow: ellipsis;
 }
